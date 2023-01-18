@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		026745B91C4FAB4C3F7066A6 /* Pods_MandiriTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D0CF5135A9C7C00724A8A42 /* Pods_MandiriTV.framework */; };
 		60748CFF2977D3CB007AFFC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748CFE2977D3CB007AFFC9 /* AppDelegate.swift */; };
 		60748D012977D3CB007AFFC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D002977D3CB007AFFC9 /* SceneDelegate.swift */; };
 		60748D032977D3CB007AFFC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D022977D3CB007AFFC9 /* ViewController.swift */; };
 		60748D062977D3CB007AFFC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60748D042977D3CB007AFFC9 /* Main.storyboard */; };
 		60748D082977D3CD007AFFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60748D072977D3CD007AFFC9 /* Assets.xcassets */; };
 		60748D0B2977D3CD007AFFC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60748D092977D3CD007AFFC9 /* LaunchScreen.storyboard */; };
+		60748D142977D745007AFFC9 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D132977D745007AFFC9 /* Genre.swift */; };
+		60748D162977E29F007AFFC9 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D152977E29F007AFFC9 /* APIEndpoints.swift */; };
+		60748D192977E396007AFFC9 /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D182977E396007AFFC9 /* GenreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		60748D072977D3CD007AFFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60748D0A2977D3CD007AFFC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60748D0C2977D3CD007AFFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60748D132977D745007AFFC9 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		60748D152977E29F007AFFC9 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		60748D182977E396007AFFC9 /* GenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
+		6D0CF5135A9C7C00724A8A42 /* Pods_MandiriTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MandiriTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6541D98FE96262E1C9171CC /* Pods-MandiriTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MandiriTV.release.xcconfig"; path = "Target Support Files/Pods-MandiriTV/Pods-MandiriTV.release.xcconfig"; sourceTree = "<group>"; };
+		CABB946B8A6CF46B5839A732 /* Pods-MandiriTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MandiriTV.debug.xcconfig"; path = "Target Support Files/Pods-MandiriTV/Pods-MandiriTV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026745B91C4FAB4C3F7066A6 /* Pods_MandiriTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		306A1B3BFB65EBFD5B1153A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CABB946B8A6CF46B5839A732 /* Pods-MandiriTV.debug.xcconfig */,
+				B6541D98FE96262E1C9171CC /* Pods-MandiriTV.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		60748CF22977D3CB007AFFC9 = {
 			isa = PBXGroup;
 			children = (
 				60748CFD2977D3CB007AFFC9 /* MandiriTV */,
 				60748CFC2977D3CB007AFFC9 /* Products */,
+				306A1B3BFB65EBFD5B1153A2 /* Pods */,
+				66E1C5926F0F0910910893E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +78,8 @@
 		60748CFD2977D3CB007AFFC9 /* MandiriTV */ = {
 			isa = PBXGroup;
 			children = (
+				60748D172977E36A007AFFC9 /* Modules */,
+				60748D122977D4CA007AFFC9 /* Entities */,
 				60748CFE2977D3CB007AFFC9 /* AppDelegate.swift */,
 				60748D002977D3CB007AFFC9 /* SceneDelegate.swift */,
 				60748D022977D3CB007AFFC9 /* ViewController.swift */,
@@ -63,8 +87,41 @@
 				60748D072977D3CD007AFFC9 /* Assets.xcassets */,
 				60748D092977D3CD007AFFC9 /* LaunchScreen.storyboard */,
 				60748D0C2977D3CD007AFFC9 /* Info.plist */,
+				60748D152977E29F007AFFC9 /* APIEndpoints.swift */,
 			);
 			path = MandiriTV;
+			sourceTree = "<group>";
+		};
+		60748D122977D4CA007AFFC9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				60748D132977D745007AFFC9 /* Genre.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		60748D172977E36A007AFFC9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				60748D1A2977E689007AFFC9 /* GenreList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		60748D1A2977E689007AFFC9 /* GenreList */ = {
+			isa = PBXGroup;
+			children = (
+				60748D182977E396007AFFC9 /* GenreViewController.swift */,
+			);
+			path = GenreList;
+			sourceTree = "<group>";
+		};
+		66E1C5926F0F0910910893E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D0CF5135A9C7C00724A8A42 /* Pods_MandiriTV.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60748D0F2977D3CD007AFFC9 /* Build configuration list for PBXNativeTarget "MandiriTV" */;
 			buildPhases = (
+				C053BFB6F0BC4C39C73EEC81 /* [CP] Check Pods Manifest.lock */,
 				60748CF72977D3CB007AFFC9 /* Sources */,
 				60748CF82977D3CB007AFFC9 /* Frameworks */,
 				60748CF92977D3CB007AFFC9 /* Resources */,
+				AABB61482110E5A50232A327 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +192,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AABB61482110E5A50232A327 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MandiriTV/Pods-MandiriTV-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MandiriTV/Pods-MandiriTV-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MandiriTV/Pods-MandiriTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C053BFB6F0BC4C39C73EEC81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MandiriTV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		60748CF72977D3CB007AFFC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60748D162977E29F007AFFC9 /* APIEndpoints.swift in Sources */,
 				60748D032977D3CB007AFFC9 /* ViewController.swift in Sources */,
 				60748CFF2977D3CB007AFFC9 /* AppDelegate.swift in Sources */,
 				60748D012977D3CB007AFFC9 /* SceneDelegate.swift in Sources */,
+				60748D192977E396007AFFC9 /* GenreViewController.swift in Sources */,
+				60748D142977D745007AFFC9 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +386,7 @@
 		};
 		60748D102977D3CD007AFFC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CABB946B8A6CF46B5839A732 /* Pods-MandiriTV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +415,7 @@
 		};
 		60748D112977D3CD007AFFC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6541D98FE96262E1C9171CC /* Pods-MandiriTV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
