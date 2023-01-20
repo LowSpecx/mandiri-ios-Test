@@ -19,6 +19,7 @@
 		60748D192977E396007AFFC9 /* GenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D182977E396007AFFC9 /* GenreViewController.swift */; };
 		60748D1D2977EA00007AFFC9 /* GenreListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60748D1C2977EA00007AFFC9 /* GenreListRouter.swift */; };
 		608E44AA297A1DDA00853F39 /* Viewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44A9297A1DDA00853F39 /* Viewable.swift */; };
+		608E44AC297A206800853F39 /* Routerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44AB297A206800853F39 /* Routerable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		60748D182977E396007AFFC9 /* GenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewController.swift; sourceTree = "<group>"; };
 		60748D1C2977EA00007AFFC9 /* GenreListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListRouter.swift; sourceTree = "<group>"; };
 		608E44A9297A1DDA00853F39 /* Viewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viewable.swift; sourceTree = "<group>"; };
+		608E44AB297A206800853F39 /* Routerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routerable.swift; sourceTree = "<group>"; };
 		6D0CF5135A9C7C00724A8A42 /* Pods_MandiriTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MandiriTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6541D98FE96262E1C9171CC /* Pods-MandiriTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MandiriTV.release.xcconfig"; path = "Target Support Files/Pods-MandiriTV/Pods-MandiriTV.release.xcconfig"; sourceTree = "<group>"; };
 		CABB946B8A6CF46B5839A732 /* Pods-MandiriTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MandiriTV.debug.xcconfig"; path = "Target Support Files/Pods-MandiriTV/Pods-MandiriTV.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				608E44A9297A1DDA00853F39 /* Viewable.swift */,
+				608E44AB297A206800853F39 /* Routerable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				60748D162977E29F007AFFC9 /* APIEndpoints.swift in Sources */,
 				60748D032977D3CB007AFFC9 /* ViewController.swift in Sources */,
 				60748CFF2977D3CB007AFFC9 /* AppDelegate.swift in Sources */,
+				608E44AC297A206800853F39 /* Routerable.swift in Sources */,
 				60748D012977D3CB007AFFC9 /* SceneDelegate.swift in Sources */,
 				60748D1D2977EA00007AFFC9 /* GenreListRouter.swift in Sources */,
 				60748D192977E396007AFFC9 /* GenreViewController.swift in Sources */,
