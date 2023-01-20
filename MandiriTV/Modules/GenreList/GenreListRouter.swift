@@ -33,6 +33,6 @@ final class GenreListRouterOutput: Routerable{
     }
     
     func transitionDetail(){
-        GenreListRouterInput().push(from: view)
+        
     }
 }
