@@ -24,6 +24,10 @@
 		608E44B0297A3F1C00853F39 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44AF297A3F1C00853F39 /* APIRequest.swift */; };
 		608E44B2297A4E6B00853F39 /* GenreListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44B1297A4E6B00853F39 /* GenreListPresenter.swift */; };
 		608E44B4297A517D00853F39 /* PresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44B3297A517D00853F39 /* PresenterType.swift */; };
+		608E44B7297A919E00853F39 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44B6297A919E00853F39 /* MovieListViewController.swift */; };
+		608E44B9297A91B500853F39 /* MovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44B8297A91B500853F39 /* MovieListRouter.swift */; };
+		608E44BB297A91C100853F39 /* MovieListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44BA297A91C100853F39 /* MovieListInteractor.swift */; };
+		608E44BD297A91CC00853F39 /* MovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 608E44BC297A91CC00853F39 /* MovieListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +49,10 @@
 		608E44AF297A3F1C00853F39 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		608E44B1297A4E6B00853F39 /* GenreListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreListPresenter.swift; sourceTree = "<group>"; };
 		608E44B3297A517D00853F39 /* PresenterType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterType.swift; sourceTree = "<group>"; };
+		608E44B6297A919E00853F39 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
+		608E44B8297A91B500853F39 /* MovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListRouter.swift; sourceTree = "<group>"; };
+		608E44BA297A91C100853F39 /* MovieListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListInteractor.swift; sourceTree = "<group>"; };
+		608E44BC297A91CC00853F39 /* MovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListPresenter.swift; sourceTree = "<group>"; };
 		6D0CF5135A9C7C00724A8A42 /* Pods_MandiriTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MandiriTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6541D98FE96262E1C9171CC /* Pods-MandiriTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MandiriTV.release.xcconfig"; path = "Target Support Files/Pods-MandiriTV/Pods-MandiriTV.release.xcconfig"; sourceTree = "<group>"; };
 		CABB946B8A6CF46B5839A732 /* Pods-MandiriTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MandiriTV.debug.xcconfig"; path = "Target Support Files/Pods-MandiriTV/Pods-MandiriTV.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +157,10 @@
 		608E44B5297A8F7900853F39 /* MovieList */ = {
 			isa = PBXGroup;
 			children = (
+				608E44B6297A919E00853F39 /* MovieListViewController.swift */,
+				608E44B8297A91B500853F39 /* MovieListRouter.swift */,
+				608E44BA297A91C100853F39 /* MovieListInteractor.swift */,
+				608E44BC297A91CC00853F39 /* MovieListPresenter.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -287,7 +299,11 @@
 				60748D012977D3CB007AFFC9 /* SceneDelegate.swift in Sources */,
 				608E44B0297A3F1C00853F39 /* APIRequest.swift in Sources */,
 				60748D1D2977EA00007AFFC9 /* GenreListRouter.swift in Sources */,
+				608E44BB297A91C100853F39 /* MovieListInteractor.swift in Sources */,
+				608E44BD297A91CC00853F39 /* MovieListPresenter.swift in Sources */,
+				608E44B7297A919E00853F39 /* MovieListViewController.swift in Sources */,
 				60748D192977E396007AFFC9 /* GenreViewController.swift in Sources */,
+				608E44B9297A91B500853F39 /* MovieListRouter.swift in Sources */,
 				60748D142977D745007AFFC9 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
