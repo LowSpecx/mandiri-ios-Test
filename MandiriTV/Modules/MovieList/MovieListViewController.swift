@@ -7,7 +7,7 @@
 
 import AsyncDisplayKit
 
-final class MovieListViewController: ASDKViewController<ASDisplayNode>{
+final class MovieListViewController: ASDKViewController<ASDisplayNode>,Viewable{
     
     override init() {
         super.init(node: ASDisplayNode())
