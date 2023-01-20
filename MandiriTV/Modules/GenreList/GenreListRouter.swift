@@ -9,8 +9,16 @@ import Foundation
 import UIKit
 
 struct GenreListRouterInput{
-    private func view()->GenreViewController{
+    public func view()->GenreViewController{
         let view = GenreViewController()
+        let interactor = GenreListInteractor()
+        let dependencies = GenreListPresenterDependencies(
+            interactor: interactor,
+            router: GenreListRouterOutput(view: view)
+        )
+        let presenter = GenreListPresenter(dependencies: dependencies)
+        view.presenter = presenter
+        view.bindPresenter()
         return view
     }
     

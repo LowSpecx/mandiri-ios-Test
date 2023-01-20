@@ -22,7 +22,7 @@ final class GenreListInteractor{
     
     init() {
         loadTrigger.subscribe(onNext: { apiRequest in
-            AF.request(apiRequest.url, parameters: apiRequest.parameters)
+            AF.request(apiRequest.urlString, parameters: apiRequest.parameters)
                 .responseDecodable(of: GenreResponse.self){
                     [weak self] response in
                     guard let self = self else {return}

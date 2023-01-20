@@ -119,6 +119,7 @@
 		60748D172977E36A007AFFC9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				608E44B5297A8F7900853F39 /* MovieList */,
 				60748D1A2977E689007AFFC9 /* GenreList */,
 			);
 			path = Modules;
@@ -143,6 +144,13 @@
 				608E44B3297A517D00853F39 /* PresenterType.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		608E44B5297A8F7900853F39 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MovieList;
 			sourceTree = "<group>";
 		};
 		66E1C5926F0F0910910893E3 /* Frameworks */ = {
