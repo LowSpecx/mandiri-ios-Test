@@ -23,4 +23,8 @@ final class APIEndpoints{
     static public func getVideosURLString(id: Int)->String{
         return baseURLString+"/movie/"+String(id)+"/videos"
     }
+    
+    static public func getGenresURLString()->String{
+        return baseURLString+"/genre/movie/list"
+    }
 }

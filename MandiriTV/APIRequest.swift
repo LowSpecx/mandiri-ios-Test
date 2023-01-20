@@ -8,6 +8,6 @@
 import Foundation
 
 struct APIRequest{
-    let url: URL
+    let urlString: String
     let parameters: [String:String]
 }
