@@ -81,6 +81,9 @@ extension GenreViewController: ASTableDataSource{
 }
 
 extension GenreViewController: ASTableDelegate{
-    
+    func tableNode(_ tableNode: ASTableNode, didSelectRowAt indexPath: IndexPath) {
+        didSelectGenreTrigger.onNext(indexPath)
+        tableNode.deselectRow(at: indexPath, animated: true)
+    }
 }
 

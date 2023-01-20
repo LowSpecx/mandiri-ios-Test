@@ -40,7 +40,7 @@ final class GenreListRouterOutput: Routerable{
         self.view = view
     }
     
-    func transitionDetail(){
-        
+    func transitionDetail(genre: Genre){
+        MovieListRouterInput().push(from: view, genre: genre)
     }
 }

@@ -4,7 +4,7 @@
 //
 //  Created by Maurice Tin on 20/01/23.
 //
-
+import Foundation
 import RxSwift
 
 typealias GenreListPresenterDependencies = (
@@ -26,6 +26,10 @@ final class GenreListPresenter: PresenterType{
     private let dependencies: GenreListPresenterDependencies
     private let disposeBag = DisposeBag()
     
+    //Output
+    let genres = BehaviorSubject<[Genre]>(value: [])
+    let error = PublishSubject<Void>()
+    
     init(dependencies: GenreListPresenterDependencies) {
         self.dependencies = dependencies
     }
@@ -39,18 +43,22 @@ final class GenreListPresenter: PresenterType{
         })
         .disposed(by: disposeBag)
         
-        let genres = BehaviorSubject<[Genre]>(value: [])
-        
         dependencies.interactor.genreResponseSubject
             .bind(to: genres)
             .disposed(by: disposeBag)
-        
-        let error = PublishSubject<Void>()
         
         dependencies.interactor.responseErrorSubject
             .bind(to: error)
             .disposed(by: disposeBag)
         
+        input.didSelectGenreTrigger.bind(onNext: transitionDetail)
+            .disposed(by: disposeBag)
+        
         return Output(genres: genres, error: error)
+    }
+    
+    private func transitionDetail(indexPath: IndexPath){
+        guard let genre = try? genres.value()[indexPath.row] else {return}
+        dependencies.router.transitionDetail(genre: genre)
     }
 }
