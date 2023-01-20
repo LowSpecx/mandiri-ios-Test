@@ -7,5 +7,6 @@
 import AsyncDisplayKit
 
 final class GenreViewController: ASDKViewController<ASDisplayNode>{
+    
 }
 
