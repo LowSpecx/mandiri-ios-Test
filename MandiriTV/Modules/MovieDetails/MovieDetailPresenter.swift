@@ -63,7 +63,7 @@ final class MovieDetailPresenter: PresenterType{
                 guard let self = self else {return}
                 self.reviewPageCounter += 1
                 guard let movie = try? self.movieSubject.value() else {return}
-                
+                print(">>> movie name: \(movie.originalTitle)")
                 let apiRequestReview = APIRequest(urlString: APIEndpoints.getReviewsURLString(id: movie.id), parameters: [
                     "api_key" : apiKey,
                     "page" : "\(self.reviewPageCounter)"

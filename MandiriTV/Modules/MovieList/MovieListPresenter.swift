@@ -27,6 +27,7 @@ final class MovieListPresenter: PresenterType{
     
     private let genre: Genre
     private let dependencies: MovieListPresenterDependencies
+    private var moviesCache: [Movie] = []
     private let disposeBag = DisposeBag()
     
     var pageCounter = 0
@@ -54,14 +55,21 @@ final class MovieListPresenter: PresenterType{
             .disposed(by: disposeBag)
         
         input.didSelectMovieTrigger.subscribe(onNext: { [weak self] indexPath in
-            guard let self = self,
-                  let movie = try? self.movies.value()[indexPath.row] else {return}
+            guard let self = self else {return}
+            let movie = self.moviesCache[indexPath.row]
             self.dependencies.router.transitionDetail(movie: movie)
         })
         .disposed(by: disposeBag)
         
         dependencies.interactor.moviesResponseSubject
             .bind(to: movies)
+            .disposed(by: disposeBag)
+        
+        dependencies.interactor.moviesResponseSubject
+            .subscribe(onNext: { [weak self] movies in
+                guard let self = self else {return}
+                self.moviesCache.append(contentsOf: movies)
+            })
             .disposed(by: disposeBag)
         
         dependencies.interactor.responseErrorSubject.bind(to: error)
