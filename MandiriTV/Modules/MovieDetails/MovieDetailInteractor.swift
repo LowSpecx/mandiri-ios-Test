@@ -37,7 +37,6 @@ final class MovieDetailInteractor{
                 .responseDecodable(of: ReviewResponse.self){ [weak self] response in
                     guard let self = self,
                           let reviews = response.value?.results else {return}
-                    print(">>> reviews: \(reviews)")
                     self.reviewResponseSubject.onNext(reviews)
                 }
         })

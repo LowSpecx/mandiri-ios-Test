@@ -85,7 +85,6 @@ final class MovieDetailViewController: ASDKViewController<ASDisplayNode>,Viewabl
         
         output.reviews.subscribe(onNext: { [weak self] reviews in
             guard let self = self else {return}
-            print(">>> reviews received: \(reviews)")
             let startIndex = self.reviews.count == 0 ? 0 : self.reviews.count-1
             let endIndex = startIndex + reviews.count
             let indexPaths = (startIndex..<endIndex).map {
@@ -107,7 +106,6 @@ final class MovieDetailViewController: ASDKViewController<ASDisplayNode>,Viewabl
 
 extension MovieDetailViewController: ASTableDataSource{
     func tableNode(_ tableNode: ASTableNode, numberOfRowsInSection section: Int) -> Int {
-        print(">>> reviews count: \(reviews.count)")
         return reviews.count
     }
     

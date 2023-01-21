@@ -18,6 +18,8 @@ final class GenreViewController: ASDKViewController<ASDisplayNode>,Viewable{
     private let genresTableNode: ASTableNode
     private var genres: [Genre] = []
     
+    private var isError = false
+    
     override init() {
         genresTableNode = ASTableNode()
         super.init(node: ASDisplayNode())
@@ -26,8 +28,15 @@ final class GenreViewController: ASDKViewController<ASDisplayNode>,Viewable{
         genresTableNode.delegate = self
         genresTableNode.style.width = ASDimensionMake(.fraction, 1)
         
-        node.layoutSpecBlock = { [genresTableNode] _,_ in
-            return ASWrapperLayoutSpec(layoutElement: genresTableNode)
+        node.layoutSpecBlock = { [weak self] _,_ in
+            guard let self = self else {return ASLayoutSpec()}
+            if self.isError{
+                let errorNode = ErrorNode {
+                    self.didLoadTrigger.onNext(())
+                }
+                return ASWrapperLayoutSpec(layoutElement: errorNode)
+            }
+            return ASWrapperLayoutSpec(layoutElement: self.genresTableNode)
         }
     }
     
@@ -47,6 +56,14 @@ final class GenreViewController: ASDKViewController<ASDisplayNode>,Viewable{
             guard let self = self else {return}
             self.genres = genres
             self.genresTableNode.reloadData()
+            self.isError = false
+            self.node.setNeedsLayout()
+        })
+        .disposed(by: disposeBag)
+        
+        output.error.subscribe(onNext: { [weak self] in
+            self?.isError = true
+            self?.node.setNeedsLayout()
         })
         .disposed(by: disposeBag)
     }

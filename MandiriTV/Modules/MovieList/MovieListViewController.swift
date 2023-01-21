@@ -59,7 +59,6 @@ final class MovieListViewController: ASDKViewController<ASDisplayNode>,Viewable{
         )
         
         output.movies.subscribe(onNext: { movies in
-            print(">>> movies: \(movies.count)")
             let startIndex = self.movies.count == 0 ? 0 : self.movies.count-1
             let endIndex = startIndex + movies.count
             let indexPaths = (startIndex..<endIndex).map {
