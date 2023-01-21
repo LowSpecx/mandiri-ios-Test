@@ -38,7 +38,7 @@ final class MovieListRouterOutput: Routerable{
         self.view = view
     }
     
-    func transitionDetail(){
-        
+    func transitionDetail(movie: Movie){
+        MovieDetailRouterInput().push(from: view, movie: movie)
     }
 }

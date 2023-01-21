@@ -97,4 +97,8 @@ extension MovieListViewController: ASCollectionDelegate{
             didReachBottomTrigger.onNext(())
         }
     }
+    
+    func collectionNode(_ collectionNode: ASCollectionNode, didSelectItemAt indexPath: IndexPath) {
+        didSelectMovieTrigger.onNext(indexPath)
+    }
 }

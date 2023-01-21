@@ -53,6 +53,13 @@ final class MovieListPresenter: PresenterType{
             })
             .disposed(by: disposeBag)
         
+        input.didSelectMovieTrigger.subscribe(onNext: { [weak self] indexPath in
+            guard let self = self,
+                  let movie = try? self.movies.value()[indexPath.row] else {return}
+            self.dependencies.router.transitionDetail(movie: movie)
+        })
+        .disposed(by: disposeBag)
+        
         dependencies.interactor.moviesResponseSubject
             .bind(to: movies)
             .disposed(by: disposeBag)
