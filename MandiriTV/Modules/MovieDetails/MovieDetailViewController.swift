@@ -6,5 +6,8 @@
 //
 
 import Foundation
+import AsyncDisplayKit
 
-
+final class MovieDetailViewController: ASDKViewController<ASDisplayNode>{
+    
+}
