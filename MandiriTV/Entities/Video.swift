@@ -9,7 +9,7 @@ import Foundation
 
 public struct VideoResponse: Decodable{
     let id: Int
-    let results: [VideoResult]
+    let results: [Video]
 }
 
 public struct Video: Decodable{

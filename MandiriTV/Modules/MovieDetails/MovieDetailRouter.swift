@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+struct MovieDetailRouterInput{
+    
+}
+
+final class MovieDetailRouterOutput: Routerable{
+    private(set) weak var view: Viewable!
+    
+    
+}
