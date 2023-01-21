@@ -27,4 +27,8 @@ final class APIEndpoints{
     static public func getGenresURLString()->String{
         return baseURLString+"/genre/movie/list"
     }
+    
+    static public func getDiscoverMoviesURLString()->String{
+        return baseURLString+"/discover/movie"
+    }
 }

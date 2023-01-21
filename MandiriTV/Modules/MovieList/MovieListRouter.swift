@@ -11,6 +11,12 @@ import UIKit
 struct MovieListRouterInput{
     public func view(genre: Genre)->MovieListViewController{
         let view = MovieListViewController()
+        let interactor = MovieListInteractor()
+        let dependencies = MovieListPresenterDependencies(interactor: interactor, router: MovieListRouterOutput(view: view))
+        let presenter = MovieListPresenter(genre: genre, dependencies: dependencies)
+        view.presenter = presenter
+        view.title = genre.name
+        view.bindPresenter()
         return view
     }
     
